@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract SimpleContract {
+    string public name;
+    uint256 public count;
+
+    constructor() {
+        name = "Simple Contract";
+        count = 0;
+    }
+
+    function setName(string memory newName) public {
+        name = newName;
+    }
+
+    function incrementCount() public {
+        count += 1;
+    }
+
+    function getName() public view returns (string memory) {
+        return name;
+    }
+
+    function getCount() public view returns (uint256) {
+        return count;
+    }
+}
